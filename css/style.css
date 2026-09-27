@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f7fa;
+    color: #071d49;
+}
+
+.navbar {
+    height: 80px;
+    background-color: #6cabdd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo img {
+    width: 55px;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #071d49;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+.inicio {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(0, 25, 60, 0.65),
+            rgba(0, 25, 60, 0.65)
+        ),
+        url("../img/estadio.jpg") center/cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.inicio-contenido h1 {
+    font-size: 70px;
+    letter-spacing: 5px;
+}
+
+.inicio-contenido p {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+
+.descripcion {
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px 30px;
+    text-align: center;
+}
+
+.descripcion h2,
+.accesos h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.descripcion p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+.accesos {
+    padding: 80px 10%;
+    background-color: white;
+    text-align: center;
+}
+
+.accesos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.acceso {
+    text-decoration: none;
+    color: #071d49;
+    background-color: #f2f7fa;
+    padding: 40px 20px;
+    border-top: 5px solid #6cabdd;
+    transition: 0.3s;
+}
+
+.acceso:hover {
+    transform: translateY(-8px);
+    background-color: #6cabdd;
+    color: white;
+}
+
+.acceso h3 {
+    margin-bottom: 15px;
+}
+
+
+.pagina-header {
+    margin-top: 80px;
+    padding: 100px 20px;
+    background-color: #071d49;
+    color: white;
+    text-align: center;
+}
+
+.pagina-header h1 {
+    font-size: 55px;
+    letter-spacing: 3px;
+}
+
+.pagina-header p {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+
+.plantel,
+.historia,
+.titulos,
+.leyendas {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 30px;
+}
+
+.plantel h2 {
+    margin: 50px 0 25px;
+    border-left: 6px solid #6cabdd;
+    padding-left: 15px;
+}
+
+
+.jugadores {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.jugador {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    min-height: 180px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.jugador:hover {
+    transform: translateY(-5px);
+}
+
+.jugador img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.jugador-info {
+    padding: 25px;
+}
+
+.jugador-info h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.jugador-info p {
+    color: #666;
+    margin: 5px 0;
+}
+
+
+.historia-etapa {
+    background-color: white;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-left: 6px solid #6cabdd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.historia-etapa h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.historia-etapa p {
+    line-height: 1.8;
+    color: #555;
+}
+
+
+.titulo-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: white;
+    padding: 35px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.trofeo img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.titulo-card h2 {
+    margin-bottom: 10px;
+}
+
+.titulo-card h3 {
+    font-size: 25px;
+    color: #6cabdd;
+    margin-bottom: 15px;
+}
+
+.titulo-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.titulo-card .años {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #071d49;
+}
+
+
+.leyendas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.leyenda {
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.leyenda:hover {
+    transform: translateY(-7px);
+}
+
+.leyenda > img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.leyenda-info {
+    padding: 25px;
+}
+
+.leyenda-info h2 {
+    margin-bottom: 15px;
+}
+
+.leyenda-info p {
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.leyenda-info p:last-child {
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+
+footer {
+    background-color: #071d49;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+footer p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 25px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #6cabdd;
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+        gap: 25px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .accesos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .jugadores {
+        grid-template-columns: 1fr;
+    }
+
+    .leyendas {
+        grid-template-columns: 1fr;
+    }
+
+    .inicio-contenido h1 {
+        font-size: 45px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .accesos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .jugador {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .jugador img {
+        width: 100%;
+        height: 280px;
+    }
+
+    .pagina-header h1 {
+        font-size: 40px;
+    }
+
+}
